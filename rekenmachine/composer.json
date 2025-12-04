@@ -1,0 +1,15 @@
+{
+    "name": "lamia/rekenmachine",
+    "autoload": {
+        "psr-4": {
+            "Rekenmachine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AmaniL-A",
+            "email": "9024484@student.zadkine.nl"
+        }
+    ],
+    "require": {}
+}
