@@ -19,7 +19,7 @@ class Fiets {
     echo $txt;
 
     // Haal alle fietsen record uit de tabel 
-    $result = getData(CRUD_TABLE);
+    $result = $this->getData(CRUD_TABLE);
 
     //print table
     printCrudTabel($result);
