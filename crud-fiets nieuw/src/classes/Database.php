@@ -1,8 +1,14 @@
 <?php
+
+/* RW bij autoloading doen
 namespace App;
 
 use PDO;
-//include_once "..\config.php";
+*/
+
+
+include_once "config.php";
+
 class Database {
     static function connectDb(){
         $servername = SERVERNAME;

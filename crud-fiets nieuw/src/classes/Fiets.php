@@ -1,10 +1,15 @@
 <?php
 // auteur: Vul hier je naam in
 // functie: algemene functies tbv hergebruik
+
+/*RW even zonder namespace, straks aanpassen bij autoloading
 namespace App;
-//include_once "../config.php";
-include_once "Database.php";
 use App\classes\Database;
+*/
+
+include_once "config.php";
+include_once "classes/Database.php";
+
 class Fiets {
 
  
@@ -23,7 +28,7 @@ class Fiets {
     $result = $this->getData(CRUD_TABLE);
 
     //print table
-    printCrudTabel($result);
+    $this->printCrudTabel($result);
     
  }
 
