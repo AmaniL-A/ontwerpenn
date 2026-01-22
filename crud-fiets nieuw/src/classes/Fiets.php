@@ -1,9 +1,10 @@
 <?php
 // auteur: Vul hier je naam in
 // functie: algemene functies tbv hergebruik
-
-include_once "config.php";
+namespace App;
+//include_once "../config.php";
 include_once "Database.php";
+use App\classes\Database;
 class Fiets {
 
  
@@ -29,7 +30,7 @@ class Fiets {
  // selecteer de data uit de opgeven table
  function getData($table): array {
     // Connect database
-    $conn = connectDb();
+    $conn = Database::connectDb();
 
     // Select data uit de opgegeven table methode query
     // query: is een prepare en execute in 1 zonder placeholders

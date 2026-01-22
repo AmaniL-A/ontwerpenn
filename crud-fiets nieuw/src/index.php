@@ -13,8 +13,8 @@
     // auteur: Vul hier je naam in   
 
     // Initialisatie
-    include 'classes/Fiets.php';
-
+    
+    include_once "classes/Fiets.php";
     // Main
 
     // Aanroep functie 
