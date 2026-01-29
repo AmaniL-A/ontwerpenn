@@ -1,32 +1,21 @@
 <?php
 
-/* RW bij autoloading doen
-namespace App;
-
-use PDO;
-*/
-
-
-include_once "config.php";
+include_once __DIR__ . "/../config.php";
 
 class Database {
-    static function connectDb(){
-        $servername = SERVERNAME;
-        $username = USERNAME;
-        $password = PASSWORD;
-        $dbname = DATABASE;
-    
+
+    public static function connectDb() {
         try {
-            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            // set the PDO error mode to exception
+            $conn = new PDO(
+                "mysql:host=" . SERVERNAME . ";dbname=" . DATABASE,
+                USERNAME,
+                PASSWORD
+            );
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            //echo "Connected successfully";
             return $conn;
-        } 
-        catch(PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+        } catch (PDOException $e) {
+            die("Database fout: " . $e->getMessage());
         }
-
     }
 }

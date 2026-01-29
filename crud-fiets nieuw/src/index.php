@@ -13,13 +13,12 @@
     // auteur: Vul hier je naam in   
 
     // Initialisatie
-    
-    include_once "classes/Fiets.php";
-    // Main
+include_once "classes/Fiets.php";
 
-    // Aanroep functie 
-    $fiets= new Fiets;
-    $fiets->crudMain();
+$fiets = new Fiets();
+$fiets->crudMain();
+
+    
     ?>
 
 </body>
